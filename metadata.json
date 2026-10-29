@@ -1,0 +1,6 @@
+{
+  "name": "Aube — Daily Acoustic Alarm",
+  "description": "A serene web alarm clock that wakes you with a distinct, multi-layered acoustic composition crafted for each day of the week.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

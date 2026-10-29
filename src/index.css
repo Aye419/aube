@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --cursor-clock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14.5' fill='%23FFFFFF'/%3E%3Ccircle cx='16' cy='16' r='12.8' fill='%23FFFFFF' stroke='%230A0A0A' stroke-width='2.2'/%3E%3Crect x='15.2' y='5' width='1.6' height='2.6' rx='0.8' fill='%23DC2626'/%3E%3Crect x='24.4' y='15.2' width='2.6' height='1.6' rx='0.8' fill='%230A0A0A'/%3E%3Crect x='15.2' y='24.4' width='1.6' height='2.6' rx='0.8' fill='%230A0A0A'/%3E%3Crect x='5' y='15.2' width='2.6' height='1.6' rx='0.8' fill='%230A0A0A'/%3E%3Cline x1='16' y1='16' x2='11.5' y2='12' stroke='%230A0A0A' stroke-width='2.2' stroke-linecap='round'/%3E%3Cline x1='16' y1='16' x2='21.5' y2='10.5' stroke='%230A0A0A' stroke-width='1.6' stroke-linecap='round'/%3E%3Cline x1='14.8' y1='14.8' x2='21.5' y2='21.5' stroke='%23DC2626' stroke-width='1.2' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='1.8' fill='%23DC2626'/%3E%3C/svg%3E") 16 16, auto;
+  --cursor-clock-pointer: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M5.5 7.5 L9.5 4.2' stroke='%23FFFFFF' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M26.5 7.5 L22.5 4.2' stroke='%23FFFFFF' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M5.5 7.5 L9.5 4.2' stroke='%230A0A0A' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M26.5 7.5 L22.5 4.2' stroke='%230A0A0A' stroke-width='2.2' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='17' r='13.8' fill='%23FFFFFF'/%3E%3Ccircle cx='16' cy='17' r='12' fill='%23FFFFFF' stroke='%23DC2626' stroke-width='2.5'/%3E%3Crect x='15.2' y='6.8' width='1.6' height='2.4' rx='0.8' fill='%23DC2626'/%3E%3Cline x1='16' y1='17' x2='11.8' y2='13.2' stroke='%230A0A0A' stroke-width='2.2' stroke-linecap='round'/%3E%3Cline x1='16' y1='17' x2='21.2' y2='11.5' stroke='%23DC2626' stroke-width='1.8' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='17' r='2' fill='%23DC2626'/%3E%3C/svg%3E") 16 16, pointer;
+}
+
+@layer base {
+  html,
+  body,
+  * {
+    cursor: var(--cursor-clock);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: #FFFFFF;
+    color: #0A0A0A;
+  }
+
+  h1, h2, h3, .font-display-heading {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+a,
+button,
+select,
+summary,
+input[type="range"],
+input[type="checkbox"],
+input[type="radio"],
+[role="button"],
+[role="switch"],
+.cursor-pointer {
+  cursor: var(--cursor-clock-pointer) !important;
+}
+
+.tabular-clock {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
